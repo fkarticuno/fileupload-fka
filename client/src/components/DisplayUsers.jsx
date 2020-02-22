@@ -18,6 +18,7 @@ class DisplayUser extends Component {
                             <TableCell>Name</TableCell>
                             <TableCell align="right">Company</TableCell>
                             <TableCell align="right">Position</TableCell>
+                            <TableCell align="right">Image</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

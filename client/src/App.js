@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
 import DisplayUsers from './components/DisplayUsers';
-import ImageUpload from './components/ImageUpload';
 import axios from 'axios';
 import './App.css';
 class App extends Component {
@@ -34,7 +33,7 @@ class App extends Component {
       <div className="App">
         <Form addUser={this.addUser}/>
         < DisplayUsers users={this.state.users} />
-        <ImageUpload />
+        
       </div>
     );
   }

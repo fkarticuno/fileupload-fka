@@ -10,7 +10,7 @@ router.post('/add', async (req, res) => {
             statusCode: 403
         });
     }
-    const { name, position, company } = req.body;
+    const { name, position, company, image } = req.body;
 
     const newUser = new User({
         position,
