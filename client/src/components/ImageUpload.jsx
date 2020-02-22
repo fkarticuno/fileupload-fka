@@ -5,7 +5,7 @@ const { isEmpty } = require('lodash');
 
 
 
-class DisplayUser extends Component {
+class ImageUpload extends Component {
     render() {
         const allUsers = this.props.users;
         const users = !isEmpty(allUsers) ? allUsers : [];
@@ -21,12 +21,11 @@ class DisplayUser extends Component {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {users.map(({ name, position, company, image }, key) => (
+                        {users.map(({ name, position, company }, key) => (
                             <TableRow key={key}>
                                 <TableCell component="th" scope="row"> {name ? name : 'No Name Found'} </TableCell>
                                 <TableCell align="right">{company ? company : 'No Company Found'}</TableCell>
                                 <TableCell align="right">{position ? position : 'No Position Found'}</TableCell>
-                                <TableCell align="right">{image ? image : 'No Image Found'}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
@@ -36,4 +35,4 @@ class DisplayUser extends Component {
     }
 }
 
-export default DisplayUser;
+export default ImageUpload;

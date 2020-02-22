@@ -16,6 +16,7 @@ router.post('/add', async (req, res) => {
         position,
         name,
         company,
+        image,
         date: Date.now()
     });
     try {
@@ -25,6 +26,7 @@ router.post('/add', async (req, res) => {
             statusCode: 200,
             name,
             position,
+            image,
             company
         });
     } catch (error) {

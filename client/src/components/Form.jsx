@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button, Input } from '@material-ui/core';
 import axios from 'axios';
 
 class Form extends Component {
   state = {
     name: '',
     position: '',
-    company: ''
+    company: '',
+    image: ''
   };
 
   handleChange = e => {
@@ -17,14 +18,15 @@ class Form extends Component {
 
   submit = e => {
     e.preventDefault();
-    const { name, position, company } = this.state;
+    const { name, position, company, image} = this.state;
     axios({
       url: '/add',
       method: 'POST',
       data: {
         name,
         position,
-        company
+        company,
+        image
       }
     })
       .then((response) => {
@@ -32,7 +34,8 @@ class Form extends Component {
         this.setState({
           name: '',
           company: '',
-          position: ''
+          position: '',
+          image: ''
         });
       })
       .catch(() => alert('Failed uploading data'))
@@ -63,6 +66,15 @@ class Form extends Component {
           id="standard-dense"
           onChange={this.handleChange}
           label="Position"
+        />
+
+        <Input
+          name="image"
+          type="file"
+          value={this.state.image}
+          id="standard-dense"
+          onChange={this.handleChange}
+          label="Image"
         />
 
         <Button variant="contained" color="primary" onClick={this.submit}> Submit </Button>
