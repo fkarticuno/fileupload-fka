@@ -3,7 +3,6 @@ import Form from './components/Form';
 import DisplayUsers from './components/DisplayUsers';
 import axios from 'axios';
 import './App.css';
-import Weather from './components/Weather/Weather'
 class App extends Component {
   state = {
     users: []
@@ -34,7 +33,7 @@ class App extends Component {
       <div className="App">
         <Form addUser={this.addUser}/>
         < DisplayUsers users={this.state.users} />
-        <Weather />
+
       </div>
     );
   }
