@@ -76,7 +76,7 @@ class Form extends Component {
         <Input
           name="image"
           type="file"
-          value={this.state.image}
+          data={this.state.image}
           id="standard-dense"
           onChange={this.handleChangeIMG}
           label="Image"
