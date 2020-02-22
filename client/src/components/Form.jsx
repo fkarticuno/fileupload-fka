@@ -14,11 +14,7 @@ class Form extends Component {
     const name = e.target.name;
     const value = e.target.value;
     this.setState({ [name]: value });
-  };
-  handleChangeIMG = e => {
-    const nameIMG = e.target.name;
-    const data = e.target.files[0];
-    this.setState({ [nameIMG]: data });
+    console.log(value)
   };
 
   submit = e => {
@@ -76,9 +72,9 @@ class Form extends Component {
         <Input
           name="image"
           type="file"
-          value={this.state.image.data}
+          value={this.state.image}
           id="standard-dense"
-          onChange={this.handleChangeIMG}
+          onChange={this.handleChange}
           label="Image"
         />
 
