@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap');
+
+.weatherContainer {
+    border: 2px solid black;
+    text-align: center;
+    font-family: "Sofia", cursive;
+}
