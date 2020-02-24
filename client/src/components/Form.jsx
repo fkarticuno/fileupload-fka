@@ -24,7 +24,7 @@ class Form extends Component {
     const data = new FormData()
     data.append('file', files[0])
     this.setState({ data: data });
-    //this.setState({ [name]: value });
+    this.setState({ [name]: value });
     
   };
 
@@ -84,7 +84,7 @@ class Form extends Component {
           name="image"
           type="file"
           value={this.state.image}
-          data={this.state.image}
+          data={this.state.image.data}
           id="standard-dense"
           onChange={this.handleChangeIMG}
           label="Image"
