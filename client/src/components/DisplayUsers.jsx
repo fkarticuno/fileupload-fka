@@ -27,7 +27,7 @@ class DisplayUser extends Component {
                                 <TableCell component="th" scope="row"> {name ? name : 'No Name Found'} </TableCell>
                                 <TableCell align="right">{company ? company : 'No Company Found'}</TableCell>
                                 <TableCell align="right">{position ? position : 'No Position Found'}</TableCell>
-                                <TableCell align="right">{image ? <img src={} alt='Sliced img' /> : 'No Image Found'}</TableCell>
+                                <TableCell align="right">{image ? <img src='' alt='Sliced img' /> : 'No Image Found'}</TableCell>
                                 <TableCell align="right">{image ? <img src={image.data} alt='Whole img' /> : 'No Image Found'}</TableCell>
                             </TableRow>
                         ))}
