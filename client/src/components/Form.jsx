@@ -23,7 +23,8 @@ class Form extends Component {
     const files = e.target.files;
     const data = new FormData()
     data.append('file', files[0])
-    this.setState({ [name]: data });
+    this.setState({ [name.value]: value });
+    this.setState({ [name.data]: data });
     
   };
 
