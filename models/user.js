@@ -5,7 +5,7 @@ const UserSchema = new Schema({
     position: String,
     name: String,
     company: String,
-    image: String,
+    image: Buffer,
     date: Date
 });
 
