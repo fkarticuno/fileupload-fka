@@ -28,7 +28,7 @@ class DisplayUser extends Component {
                                 <TableCell align="right">{company ? company : 'No Company Found'}</TableCell>
                                 <TableCell align="right">{position ? position : 'No Position Found'}</TableCell>
                                 <TableCell align="right">{image ? <img src='' alt='Sliced img' /> : 'No Image Found'}</TableCell>
-                                <TableCell align="right">{image ? <img src={image.data} alt='Whole img' /> : 'No Image Found'}</TableCell>
+                                <TableCell align="right">{image ? <img src={image} alt='Whole img' /> : 'No Image Found'}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
